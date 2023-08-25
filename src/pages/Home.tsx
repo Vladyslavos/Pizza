@@ -9,38 +9,37 @@ import {
   selectCurrentPage,
   selectFilter,
   selectSearchValue,
-  selectSort,
   selectSortProperty,
   setCategoryId,
 } from "../redux/slices/filterSlice";
 import { setCurrentPage } from "../redux/slices/filterSlice";
 import { fetchPizzas, selectPizza } from "../redux/slices/pizzaSlice";
-import { Link } from "react-router-dom";
 
-export default function Home() {
+export const Home: React.FC = () => {
   const { items, status } = useSelector(selectPizza);
   const dispatch = useDispatch();
   const categoryId = useSelector(selectFilter);
   const sortType = useSelector(selectSortProperty);
   const currentPage = useSelector(selectCurrentPage);
   const searchValue = useSelector(selectSearchValue);
-  const onChangePage = (e) => {
+
+  const onChangePage = (e: number) => {
     dispatch(setCurrentPage(e));
   };
-  const onChangeCategory = (id) => {
+  const onChangeCategory = (id: number) => {
     dispatch(setCategoryId(id));
   };
 
   const skeletons = [...new Array(6)].map((_, i) => <Skeleton key={i} />);
   const pizzaMap = items
-    .filter((el) => {
+    .filter((el: any) => {
       if (el.title.toLowerCase().includes(searchValue.toLowerCase())) {
         return true;
       } else {
         return false;
       }
     })
-    .map((el) => <PizzaBlock {...el} />);
+    .map((el: any) => <PizzaBlock {...el} />);
 
   //Fetch code starts
   React.useEffect(() => {
@@ -53,6 +52,7 @@ export default function Home() {
     const category = categoryId > 0 ? String(categoryId) : "";
 
     dispatch(
+      //@ts-ignore
       fetchPizzas({
         sortBy,
         order,
@@ -92,4 +92,6 @@ export default function Home() {
       <Pagination value={currentPage} onChangePage={onChangePage} />
     </div>
   );
-}
+};
+
+export default Home;

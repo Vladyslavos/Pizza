@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import "./scss/app.scss";
-import Header from "./components/Header.jsx";
-import Home from "./pages/Home.jsx";
+import Header from "./components/Header";
+import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import NotFoundBlock from "./components/NotFoundBlock/index.jsx";
+import NotFoundBlock from "./components/NotFoundBlock/index";
 import { Route, Routes } from "react-router-dom";
 import { DetailedPizza } from "./pages/DetailedPizza";
 

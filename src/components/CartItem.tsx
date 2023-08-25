@@ -2,7 +2,17 @@ import React from "react";
 import { addItem, minusItem, removeItem } from "../redux/slices/cartSlice";
 import { useDispatch } from "react-redux";
 
-export const CartItem: React.FC = ({
+interface IProps {
+  id: string;
+  title: string;
+  type: string;
+  price: number;
+  size: number;
+  count: number;
+  imageUrl: string;
+}
+
+export const CartItem: React.FC<IProps> = ({
   id,
   title,
   type,
@@ -10,7 +20,7 @@ export const CartItem: React.FC = ({
   count,
   imageUrl,
   size,
-}: any) => {
+}) => {
   const dispatch = useDispatch();
 
   const onClickInc = () => {

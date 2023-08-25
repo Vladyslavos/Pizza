@@ -1,6 +1,14 @@
 import React from "react";
 
-export const Categories: React.FC = ({ categoryId, onChangeCategory }: any) => {
+interface IProps {
+  categoryId: number;
+  onChangeCategory: (i: number) => void;
+}
+
+export const Categories: React.FC<IProps> = ({
+  categoryId,
+  onChangeCategory,
+}) => {
   const categories = ["All", "Meat", "Vegeterians", "Grill", "Spicy", "Closed"];
 
   return (

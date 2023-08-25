@@ -1,8 +1,13 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { AnyIfEmpty, useDispatch, useSelector } from "react-redux";
 import { selectSort, setSort } from "../redux/slices/filterSlice";
 
-export const list = [
+interface ISort {
+  name: string;
+  sortProperty: string;
+}
+
+export const list: ISort[] = [
   { name: "popularity (DESC)", sortProperty: "popularity" },
   { name: "popularity (ASC)", sortProperty: "-popularity" },
   { name: "price (DESC)", sortProperty: "price" },
@@ -15,15 +20,15 @@ export default function Sort() {
   const dispatch = useDispatch();
   const sort = useSelector(selectSort);
   const [isVisible, setIsVisible] = React.useState(false);
-  const sortRef = React.useRef();
+  const sortRef = React.useRef<HTMLDivElement | null>(null);
 
-  const onClickListItem = (i) => {
+  const onClickListItem = (i: ISort) => {
     dispatch(setSort(i));
     setIsVisible(false);
   };
 
   React.useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: any) => {
       if (!event.composedPath().includes(sortRef.current)) {
         setIsVisible(false);
       }
@@ -65,7 +70,9 @@ export default function Sort() {
               <li
                 key={i}
                 onClick={() => onClickListItem(obj)}
-                className={sort.sortProperty === obj.sort ? "active" : ""}
+                className={
+                  sort.sortProperty === obj.sortProperty ? "active" : ""
+                }
               >
                 {obj.name}
               </li>
