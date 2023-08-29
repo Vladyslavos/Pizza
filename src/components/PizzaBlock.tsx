@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addItem } from "../redux/slices/cartSlice";
 import { Link } from "react-router-dom";
+import { ICartItems } from "../redux/slices/cartSlice";
 
 interface IProps {
   id: string;
@@ -25,13 +26,14 @@ export const PizzaBlock: React.FC<IProps> = (props) => {
   const addedCount = cartItem ? cartItem.count : 0;
 
   const onClickAdd = () => {
-    const item = {
+    const item: ICartItems = {
       id,
       title,
       price,
       imageUrl,
       type: typeNames[activeType],
       size: sizes[activeSize],
+      count: 0,
     };
     dispatch(addItem(item));
   };

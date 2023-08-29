@@ -27,7 +27,7 @@ export const CartItem: React.FC<IProps> = ({
     dispatch(
       addItem({
         id,
-      })
+      } as IProps)
     );
   };
 
