@@ -3,14 +3,14 @@ import axios from "axios";
 import { RootState } from "../store";
 import { ICartItems } from "./cartSlice";
 
-interface IFetchPizzas {
+export interface IFetchPizzas {
   currentPage: number;
   category: string;
   sortBy: string;
   order: string;
   searchValue: string;
 }
-interface IPizzas {
+export interface IPizzas {
   id: string;
   title: string;
   price: number;
@@ -19,13 +19,13 @@ interface IPizzas {
   types: number[];
   rating: number;
 }
-enum Status {
+export enum Status {
   LOADING = "loading",
   SUCCESS = "success",
   ERROR = "error",
 }
 
-interface IPizzaState {
+export interface IPizzaState {
   items: IPizzas[];
   status: Status;
 }

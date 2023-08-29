@@ -14,10 +14,11 @@ import {
 } from "../redux/slices/filterSlice";
 import { setCurrentPage } from "../redux/slices/filterSlice";
 import { fetchPizzas, selectPizza } from "../redux/slices/pizzaSlice";
+import { useAppDispatch } from "../redux/store";
 
 export const Home: React.FC = () => {
   const { items, status } = useSelector(selectPizza);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const categoryId = useSelector(selectFilter);
   const sortType = useSelector(selectSortProperty);
   const currentPage = useSelector(selectCurrentPage);
@@ -39,7 +40,7 @@ export const Home: React.FC = () => {
         return false;
       }
     })
-    .map((el: any) => <PizzaBlock {...el} />);
+    .map((el: any) => <PizzaBlock {...el} key={el.id} />);
 
   //Fetch code starts
   React.useEffect(() => {
@@ -52,7 +53,6 @@ export const Home: React.FC = () => {
     const category = categoryId > 0 ? String(categoryId) : "";
 
     dispatch(
-      //@ts-ignore
       fetchPizzas({
         sortBy,
         order,
