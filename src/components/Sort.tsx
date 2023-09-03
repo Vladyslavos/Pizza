@@ -16,7 +16,7 @@ export const list: ISort[] = [
   { name: "title (ASC)", sortProperty: "-title" },
 ];
 
-export default function Sort() {
+export const Sort: React.FC = React.memo(() => {
   const dispatch = useDispatch();
   const sort = useSelector(selectSort);
   const [isVisible, setIsVisible] = React.useState(false);
@@ -82,4 +82,5 @@ export default function Sort() {
       )}
     </div>
   );
-}
+});
+export default Sort;

@@ -1,3 +1,4 @@
+import React from "react";
 import pizzaImg from "../assets/pizza-logo.png";
 import { Link } from "react-router-dom";
 import Search from "./Search";
@@ -12,7 +13,16 @@ export default function Header() {
     0
   );
   const location = useLocation();
-  console.log(location);
+  const isMounted = React.useRef(false);
+
+  React.useEffect(() => {
+    if (isMounted.current) {
+      const json = JSON.stringify(items);
+      localStorage.setItem("cart", json);
+    }
+    isMounted.current = true;
+  }, [items]);
+
   return (
     <div className="header">
       <div className="container">
@@ -25,7 +35,7 @@ export default function Header() {
             </div>
           </div>
         </Link>
-        <Search />
+        {location.pathname !== "/cart" && <Search />}
         <div className="header__cart">
           {location.pathname !== "/cart" && (
             <Link to={"/cart"} className="button button--cart">

@@ -52,9 +52,14 @@ export const CartItem: React.FC<IProps> = ({
         </p>
       </div>
       <div className="cart__item-count">
-        <div
-          className="button button--outline button--circle cart__item-count-minus"
+        <button
+          className={
+            count === 1
+              ? "button button--outline button--circle cart__item-count-minus disabled"
+              : "button button--outline button--circle cart__item-count-minus"
+          }
           onClick={onClickDec}
+          disabled={count === 1}
         >
           <svg
             width="10"
@@ -72,7 +77,7 @@ export const CartItem: React.FC<IProps> = ({
               fill="#EB5A1E"
             />
           </svg>
-        </div>
+        </button>
         <b>{count}</b>
         <div
           className="button button--outline button--circle cart__item-count-plus"

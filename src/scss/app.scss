@@ -189,6 +189,17 @@ body {
         }
       }
 
+      .disabled {
+        opacity: 0.4;
+        border-color: #787878;
+        svg path {
+          fill: #787878;
+        }
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
       b {
         font-size: 22px;
       }

@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
+import { getCartFromLs } from "../../utils/getCartFromLocalStorage";
 
 export interface ICartItems {
   id: string;
@@ -16,14 +17,23 @@ export interface ICartState {
   items: ICartItems[];
 }
 
+export interface ICartPersistData {
+  _persist: {
+    version: number;
+    rehydrated: boolean;
+  };
+}
+
+const { items, totalPrice } = getCartFromLs();
+
 const initialState: ICartState = {
-  totalPrice: 0,
-  items: [],
+  totalPrice,
+  items,
 };
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState,
+  initialState: initialState as ICartState,
   reducers: {
     minusItem(state, action: PayloadAction<string>) {
       const findItem = state.items.find((obj) => obj.id === action.payload);

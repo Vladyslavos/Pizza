@@ -24,9 +24,9 @@ export const Home: React.FC = () => {
   const currentPage = useSelector(selectCurrentPage);
   const searchValue = useSelector(selectSearchValue);
 
-  const onChangePage = (e: number) => {
+  const onChangePage = React.useCallback((e: number) => {
     dispatch(setCurrentPage(e));
-  };
+  }, []);
   const onChangeCategory = (id: number) => {
     dispatch(setCategoryId(id));
   };
