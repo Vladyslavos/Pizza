@@ -3,8 +3,10 @@ import pizzaImg from "../assets/pizza-logo.png";
 import { Link } from "react-router-dom";
 import Search from "./Search";
 import { useSelector } from "react-redux/es/hooks/useSelector";
-import { selectCart } from "../redux/slices/cartSlice";
+import { selectCart } from "../redux/slices/cart/selectors";
 import { useLocation } from "react-router-dom";
+import { animation } from "../animation/animation";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const { items, totalPrice } = useSelector(selectCart);
@@ -24,7 +26,14 @@ export default function Header() {
   }, [items]);
 
   return (
-    <div className="header">
+    <motion.div
+      className="header"
+      initial="hidden"
+      whileInView="visible"
+      custom={1}
+      variants={animation}
+      viewport={{ once: true }}
+    >
       <div className="container">
         <Link to={"/"}>
           <div className="header__logo">
@@ -75,6 +84,6 @@ export default function Header() {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

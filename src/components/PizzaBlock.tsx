@@ -1,8 +1,10 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addItem } from "../redux/slices/cartSlice";
+import { addItem } from "../redux/slices/cart/slice";
 import { Link } from "react-router-dom";
-import { ICartItems } from "../redux/slices/cartSlice";
+import { ICartItems } from "../redux/slices/cart/types";
+import { animation } from "../animation/animation";
+import { motion } from "framer-motion";
 
 interface IProps {
   id: string;
@@ -39,7 +41,14 @@ export const PizzaBlock: React.FC<IProps> = (props) => {
   };
 
   return (
-    <div className="pizza-block">
+    <motion.div
+      className="pizza-block"
+      initial="hidden"
+      whileInView="visible"
+      custom={3}
+      variants={animation}
+      viewport={{ once: true }}
+    >
       <Link to={`/pizza/${id}`} key={id}>
         <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
         <h4 className="pizza-block__title">{title}</h4>
@@ -91,7 +100,7 @@ export const PizzaBlock: React.FC<IProps> = (props) => {
           {addedCount > 0 && <i>{addedCount}</i>}
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

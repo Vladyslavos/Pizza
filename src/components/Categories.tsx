@@ -1,4 +1,6 @@
 import React from "react";
+import { animation } from "../animation/animation";
+import { motion } from "framer-motion";
 
 interface IProps {
   categoryId: number;
@@ -17,7 +19,14 @@ export const Categories: React.FC<IProps> = React.memo(
     ];
 
     return (
-      <div className="categories">
+      <motion.div
+        className="categories"
+        initial="hidden"
+        whileInView="visible"
+        custom={2}
+        variants={animation}
+        viewport={{ once: true }}
+      >
         <ul>
           {categories.map((categoryName, i) => (
             <li
@@ -29,7 +38,7 @@ export const Categories: React.FC<IProps> = React.memo(
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
     );
   }
 );

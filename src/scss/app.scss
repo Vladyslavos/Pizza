@@ -353,3 +353,23 @@ body {
     }
   }
 }
+.container-details__price__rating {
+  max-width: 600px;
+  padding: 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  span {
+    color: $orange;
+  }
+}
+.container-details__description {
+  padding: 30px;
+  text-align: left;
+}
+.container-descriptiption__link {
+  text-decoration: underline;
+  color: $orange;
+  font-size: 22px;
+}

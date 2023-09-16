@@ -10,11 +10,14 @@ import {
   selectFilter,
   selectSearchValue,
   selectSortProperty,
-  setCategoryId,
-} from "../redux/slices/filterSlice";
-import { setCurrentPage } from "../redux/slices/filterSlice";
-import { fetchPizzas, selectPizza } from "../redux/slices/pizzaSlice";
+} from "../redux/slices/filter/selectrors";
+import { setCategoryId } from "../redux/slices/filter/slice";
+import { setCurrentPage } from "../redux/slices/filter/slice";
+import { selectPizza } from "../redux/slices/pizza/selectors";
+import { fetchPizzas } from "../redux/slices/pizza/asyncAction";
 import { useAppDispatch } from "../redux/store";
+import { animation } from "../animation/animation";
+import { motion } from "framer-motion";
 
 export const Home: React.FC = () => {
   const { items, status } = useSelector(selectPizza);
@@ -66,7 +69,14 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <div className="container">
+    <motion.div
+      className="container"
+      initial="hidden"
+      whileInView="visible"
+      custom={2}
+      variants={animation}
+      viewport={{ once: true }}
+    >
       <div className="content__top">
         <Categories
           categoryId={categoryId}
@@ -90,7 +100,7 @@ export const Home: React.FC = () => {
       )}
 
       <Pagination value={currentPage} onChangePage={onChangePage} />
-    </div>
+    </motion.div>
   );
 };
 

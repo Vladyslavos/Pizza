@@ -1,6 +1,9 @@
 import React from "react";
-import { AnyIfEmpty, useDispatch, useSelector } from "react-redux";
-import { selectSort, setSort } from "../redux/slices/filterSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectSort } from "../redux/slices/filter/selectrors";
+import { setSort } from "../redux/slices/filter/slice";
+import { animation } from "../animation/animation";
+import { motion } from "framer-motion";
 
 interface ISort {
   name: string;
@@ -39,7 +42,15 @@ export const Sort: React.FC = React.memo(() => {
   }, []);
 
   return (
-    <div className="sort" ref={sortRef}>
+    <motion.div
+      className="sort"
+      ref={sortRef}
+      initial="hidden"
+      whileInView="visible"
+      custom={3}
+      variants={animation}
+      viewport={{ once: true }}
+    >
       <div className="sort__label">
         <svg
           width="10"
@@ -80,7 +91,7 @@ export const Sort: React.FC = React.memo(() => {
           </ul>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 });
 export default Sort;

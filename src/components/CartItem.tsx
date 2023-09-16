@@ -1,5 +1,5 @@
 import React from "react";
-import { addItem, minusItem, removeItem } from "../redux/slices/cartSlice";
+import { addItem, minusItem, removeItem } from "../redux/slices/cart/slice";
 import { useDispatch } from "react-redux";
 
 interface IProps {
