@@ -9,7 +9,7 @@ body {
 .wrapper {
   width: calc(100vw - 100px);
   height: 100%;
-  background-color: #fff;
+  background-color: #ffff;
   margin: 50px auto;
   border-radius: 10px;
   max-width: 1400px;
@@ -263,7 +263,7 @@ body {
 
         &:last-of-type {
           b {
-            color: $orange;
+            color: $olive;
           }
         }
       }
@@ -352,7 +352,33 @@ body {
       font-size: 18px;
     }
   }
+  @media (max-width: 600px) {
+    img {
+      width: 120px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 12px;
+    }
+    &--empty {
+      width: 300px;
+    }
+  }
+  @media (max-width: 370px) {
+    .button--black {
+      width: 150px;
+    }
+    p {
+      font-size: 10px;
+    }
+    &--empty {
+      width: 200px;
+    }
+  }
 }
+
 .container-details__price__rating {
   max-width: 600px;
   padding: 30px;
@@ -361,15 +387,80 @@ body {
   align-items: center;
   justify-content: space-around;
   span {
-    color: $orange;
+    color: $olive;
   }
 }
 .container-details__description {
   padding: 30px;
+  font-size: 22px;
   text-align: left;
 }
 .container-descriptiption__link {
   text-decoration: underline;
-  color: $orange;
+  color: $olive;
   font-size: 22px;
+}
+.container-detailed__pizza h1 {
+  text-decoration: underline;
+  color: $olive;
+}
+.loading {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0 auto;
+}
+@media (max-width: 660px) {
+  .pizzaImg {
+    width: 420p;
+    height: 420px;
+  }
+}
+
+@media (max-width: 540px) {
+  .pizzaImg {
+    width: 320p;
+    height: 320px;
+  }
+  .container-detailed__pizza h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 440px) {
+  .pizzaImg {
+    width: 220p;
+    height: 220px;
+  }
+  .container-details__description {
+    font-size: 18px;
+  }
+}
+::selection {
+  background: #ccc;
+}
+::-moz-selection {
+  background: #ccc;
+}
+::-webkit-selection {
+  background: #ccc;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #26272b;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $olive;
+  border-radius: 8px;
+  border: 3px solid rgba(24, 24, 24, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #323941;
 }

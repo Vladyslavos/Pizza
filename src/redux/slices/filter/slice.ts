@@ -14,11 +14,9 @@ export const filterSlice = createSlice({
   reducers: {
     setCategoryId(state, action: PayloadAction<number>) {
       state.categoryId = action.payload;
-      console.log(action.payload);
     },
     setSort(state, action: PayloadAction<ISort>) {
       state.sort = action.payload;
-      console.log(action.payload);
     },
     setCurrentPage(state, action: PayloadAction<number>) {
       state.currentPage = action.payload;

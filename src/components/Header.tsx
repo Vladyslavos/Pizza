@@ -26,7 +26,7 @@ export default function Header() {
   }, [items]);
 
   return (
-    <motion.div
+    <motion.header
       className="header"
       initial="hidden"
       whileInView="visible"
@@ -40,7 +40,7 @@ export default function Header() {
             <img width="38" src={pizzaImg} alt="Pizza logo" />
             <div>
               <h1>React Pizza</h1>
-              <p>Most delicious pizza in universe</p>
+              <p>Make Pizza a Part of Your Every Day</p>
             </div>
           </div>
         </Link>
@@ -84,6 +84,6 @@ export default function Header() {
           )}
         </div>
       </div>
-    </motion.div>
+    </motion.header>
   );
 }

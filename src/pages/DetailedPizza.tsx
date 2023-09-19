@@ -32,28 +32,30 @@ export const DetailedPizza: React.FC = () => {
   }, []);
 
   if (!pizzaInfo) {
-    return <>"Loading..."</>;
+    return <p className="loading">Loading...</p>;
   }
 
   return (
     <div className="container">
-      <h1>{pizzaInfo.title}</h1>
-      <img src={pizzaInfo.imageUrl} />
-      <div className="container-details__price__rating">
-        <h2>
-          {pizzaInfo.price} <span>$</span>
-        </h2>
-        <h2>
-          Rating:<span>{pizzaInfo.rating}</span>
-        </h2>
+      <div className="container-detailed__pizza">
+        <h1>{pizzaInfo.title}</h1>
+        <img src={pizzaInfo.imageUrl} className="pizzaImg" />
+        <div className="container-details__price__rating">
+          <h2>
+            {pizzaInfo.price} <span>$</span>
+          </h2>
+          <h2>
+            Rating:<span> {pizzaInfo.rating}⭐</span>
+          </h2>
+        </div>
+        <hr className="container-description__hr" />
+        <p className="container-details__description">
+          <strong>{pizzaInfo.description}</strong>
+        </p>
+        <Link to={"/"} className="container-descriptiption__link">
+          Get back
+        </Link>
       </div>
-      <hr className="container-description__hr" />
-      <p className="container-details__description">
-        <strong>{pizzaInfo.description}</strong>
-      </p>
-      <Link to={"/"} className="container-descriptiption__link">
-        Get back
-      </Link>
     </div>
   );
 };
