@@ -5,6 +5,9 @@
 
 Pizza Shop is a web application designed to effortlessly order your favorite pizza online. It incorporates search functionality, sorting, and categorization of various pizza types, as well as the ability to add pizzas to a cart.
 
+
+<a href = "https://vladyslavos.github.io/Pizza/">LIVE</a>
+
 ![ezgif com-video-to-gif (3)](https://github.com/Vladyslavos/Pizza/assets/67589338/c5d1e339-fb1e-41c0-ac5b-cbfa0d14401c)
 
 
