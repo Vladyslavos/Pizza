@@ -1,4 +1,5 @@
-<center><h1>Pizza Shop</h1></center>
+<h1 align="center">Pizza Shop</h1>
+
 
 ## About The Project
 
