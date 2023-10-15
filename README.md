@@ -4,7 +4,7 @@
 
 Pizza Shop is a web application designed to effortlessly order your favorite pizza online. It incorporates search functionality, sorting, and categorization of various pizza types, as well as the ability to add pizzas to a cart.
 
-![Project Screenshot](path-to-your-screenshot.png)
+![ezgif com-video-to-gif (3)](https://github.com/Vladyslavos/Pizza/assets/67589338/c5d1e339-fb1e-41c0-ac5b-cbfa0d14401c)
 
 > **Note**: Replace `path-to-your-screenshot.png` with the path to a screenshot of your project.
 
@@ -15,7 +15,6 @@ Pizza Shop is a web application designed to effortlessly order your favorite piz
 - **JavaScript (JS)** & **TypeScript (TS)**: Ensuring website interactivity and dynamic engagement.
 - **React**: A JavaScript library for building user interfaces, providing the capability to create reusable UI components.
 - **Redux**: Utilized for managing the application state and providing shopping cart functionality.
-- **Additional Libraries**: Other libraries might be used to facilitate development and expand functionality.
 
 ## Main Features
 
@@ -58,7 +57,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Contact
 
-Your Name - [Your Email](mailto:your-email@example.com)
+Your Name - [Your Email](mailto:vladyslawork@gmail.com)
 
-Project Link: [https://github.com/yourusername/your-repo-name](https://github.com/yourusername/your-repo-name)
+Project Link: [https://github.com/yourusername/your-repo-name](https://vladyslavos.github.io/Pizza/)
 
