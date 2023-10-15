@@ -1,4 +1,4 @@
-# Pizza Shop
+<center><h1>Pizza Shop</h1></center>
 
 ## About The Project
 
@@ -6,7 +6,6 @@ Pizza Shop is a web application designed to effortlessly order your favorite piz
 
 ![ezgif com-video-to-gif (3)](https://github.com/Vladyslavos/Pizza/assets/67589338/c5d1e339-fb1e-41c0-ac5b-cbfa0d14401c)
 
-> **Note**: Replace `path-to-your-screenshot.png` with the path to a screenshot of your project.
 
 ## Core Tech Stack
 
