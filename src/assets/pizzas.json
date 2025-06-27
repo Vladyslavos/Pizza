@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "imageUrl": "https://media.dodostatic.com/image/r:292x292/11ef27d5c47936ae9a815279fea79db1.jpg",
+    "imageUrl": "https://media.dodostatic.com/image/r:584x584/11ef9b780f6e5ddfaaa378463c4ae6ff.avif",
     "title": "Meat",
     "types": [0, 1],
     "sizes": [26, 30, 40],
@@ -11,7 +11,7 @@
   },
   {
     "id": 1,
-    "imageUrl": "https://media.dodostatic.com/image/r:292x292/11ef27d1d110006a8fefc61c39dd22ab.jpg",
+    "imageUrl": "https://media.dodostatic.com/image/r:584x584/11ef9b761820654fa9c4e6c8a529ef93.avif",
     "title": "Vegeterians",
     "types": [0, 1],
     "sizes": [26, 40],
@@ -21,7 +21,7 @@
   },
   {
     "id": 2,
-    "imageUrl": "https://media.dodostatic.com/image/r:292x292/11ef9b41d7037c45a36f2d185a9d3b93.jpg",
+    "imageUrl": "https://media.dodostatic.com/image/r:584x584/11ef90c0aeeb21818b02397d04e83e36.avif",
     "title": "Grill",
     "types": [0, 1],
     "sizes": [26, 40],
@@ -31,7 +31,7 @@
   },
   {
     "id": 3,
-    "imageUrl": "https://media.dodostatic.com/image/r:292x292/11ef27d2e105c9cd8ad6ef2bc7b01c44.jpg",
+    "imageUrl": "https://media.dodostatic.com/image/r:584x584/11ef27d69a56561881b51b89ae39ee0e.avif",
     "title": "Spicy",
     "types": [0, 1],
     "sizes": [26, 30, 40],
@@ -41,7 +41,7 @@
   },
   {
     "id": 4,
-    "imageUrl": "https://media.dodostatic.com/image/r:292x292/11ef9b485a56525d863cad019bfa9896.jpg",
+    "imageUrl": "https://media.dodostatic.com/image/r:584x584/11eef5c1192a0172a9f2a0ff43846b80.avif",
     "title": "Closed",
     "types": [0, 1],
     "sizes": [26, 40],
