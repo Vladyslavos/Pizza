@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
+    "imageUrl": "https://media.dodostatic.com/image/r:292x292/11ef27d5c47936ae9a815279fea79db1.jpg",
     "title": "Meat",
     "types": [0, 1],
     "sizes": [26, 30, 40],
@@ -11,7 +11,7 @@
   },
   {
     "id": 1,
-    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/d6c9f93ea37649ac923e9586c034a5a0_366x366.webp",
+    "imageUrl": "https://media.dodostatic.com/image/r:292x292/11ef27d1d110006a8fefc61c39dd22ab.jpg",
     "title": "Vegeterians",
     "types": [0, 1],
     "sizes": [26, 40],
@@ -21,7 +21,7 @@
   },
   {
     "id": 2,
-    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/d7bbbc4c74af442e8b9b3ea2faf3c941_366x366.webp",
+    "imageUrl": "https://media.dodostatic.com/image/r:292x292/11ef9b41d7037c45a36f2d185a9d3b93.jpg",
     "title": "Grill",
     "types": [0, 1],
     "sizes": [26, 40],
@@ -31,7 +31,7 @@
   },
   {
     "id": 3,
-    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/c8ac7d2eb95b4bd0b8bc2f366415896c_366x366.webp",
+    "imageUrl": "https://media.dodostatic.com/image/r:292x292/11ef27d2e105c9cd8ad6ef2bc7b01c44.jpg",
     "title": "Spicy",
     "types": [0, 1],
     "sizes": [26, 30, 40],
@@ -41,7 +41,7 @@
   },
   {
     "id": 4,
-    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/1737ebbfb03148a291f8b3060cd9f0a1_366x366.webp",
+    "imageUrl": "https://media.dodostatic.com/image/r:292x292/11ef9b485a56525d863cad019bfa9896.jpg",
     "title": "Closed",
     "types": [0, 1],
     "sizes": [26, 40],
